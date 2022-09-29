@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:onlinestore/db/operation.dart';
 import 'package:onlinestore/pages/save_page.dart';
 class ListPage extends StatelessWidget{
   //ListPage({super.key});
   static const String ROUTE = "/";
   @override
   Widget build(BuildContext context){
+    //producto list productos
+    Operation.productos();
 
     return Scaffold(
       floatingActionButton: FloatingActionButton(child: Icon(Icons.add),onPressed: (
@@ -14,8 +17,7 @@ class ListPage extends StatelessWidget{
       appBar: AppBar(title: Text("productos"),),
       body: Container(child: ListView(children: <Widget>[
         ListTile(title: Text("producto 1"),),
-        ListTile(title: Text("producto 2"),),
-        ListTile(title: Text("producto 3"),),
+        ListTile(title: Text("producto 2"),)
       ],),),
     );
   }
